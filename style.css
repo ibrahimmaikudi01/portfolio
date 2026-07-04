@@ -262,6 +262,7 @@ a {
   border: 1px solid var(--border-color);
   border-radius: 16px;
   overflow: hidden;
+  text-align: center;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -270,8 +271,32 @@ a {
   box-shadow: 0 16px 34px rgba(47,128,255,0.25);
 }
 
+.project-icon {
+  width: 56px;
+  height: 56px;
+  margin: 26px auto 0;
+  border-radius: 14px;
+  background: rgba(47,128,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-light);
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.project-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.project-card:hover .project-icon {
+  background: var(--blue);
+  color: #fff;
+  transform: scale(1.08) rotate(-4deg);
+}
+
 .project-info {
-  padding: 30px 24px;
+  padding: 20px 24px 30px;
 }
 
 .project-info h3 {
@@ -287,7 +312,9 @@ a {
 }
 
 .btn-secondary {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   border: 1.5px solid var(--blue);
   color: var(--blue-light);
   padding: 10px 22px;
@@ -300,6 +327,16 @@ a {
 .btn-secondary:hover {
   background: var(--blue);
   color: #fff;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.btn-secondary:hover .btn-icon {
+  transform: translate(3px, -3px);
 }
 
 /* CONTACT */
